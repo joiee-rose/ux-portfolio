@@ -1,0 +1,297 @@
+:root {
+    --bg-color: #212121;
+    --text-color: #fafafa;
+    --primary-color: #5928ed;
+    --secondary-color: #d62828;
+    --tertiary-color: #fafafa;
+    --text-font-family: 'Poppins', sans-serif;
+}
+html, body {
+    width: 100%;
+    height: calc(100% + 50px);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: fixed;
+    z-index: -1;
+}
+h1 {
+    font-family: var(--text-font-family);
+    font-size: 32px;
+    font-weight: 700;
+}
+h2 {
+    font-family: var(--text-font-family);
+    font-size: 24px;
+    font-weight: 700;
+}
+h3 {
+    font-family: var(--text-font-family);
+    font-size: 18.72px;
+    font-weight: 600;
+}
+h4 {
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 600;
+}
+h5 {
+    font-family: var(--text-font-family);
+    font-size: 13.28px;
+    font-weight: 500;
+}
+h6 {
+    font-family: var(--text-font-family);
+    font-size: 10.72px;
+    font-weight: 500;
+}
+.p1 {
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 300;
+}
+.p2 {
+    font-family: var(--text-font-family);
+    font-size: 14px;
+    font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6, .p1, .p2 {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+.navbar .navbar-icons {
+    margin: 0;
+    padding: 38px 0px 38px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.navbar .navbar-icons .icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+.navbar .navbar-icons .icon .icon-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.navbar .navbar-icons .icon .icon-bottom {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    z-index: 1;
+}
+.navbar .navbar-icons .icon .icon-bottom path {
+    fill: var(--primary-color); /* bottom path color */
+}
+.navbar .navbar-icons .icon:hover .icon-top path {
+    fill: var(--secondary-color); /* top path color on hover */
+    transform: translate(1px, 2px);
+}
+.navbar .navbar-icons .icon:hover .icon-bottom path {
+    fill: var(--primary-color); /* bottom path color on hover */
+    transform: translate(-1px, -1px);
+}
+.navbar .navbar-icons .icon path {
+    transition: fill 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+}
+.navbar .navbar-labels {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: var(--text-color);
+}
+.navbar .navbar-labels a {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+.navbar .navbar-labels a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar .navbar-labels a:hover::after {
+    width: 100%;
+    left: 0;
+}
+.navbar .navbar-labels a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+.content {
+    min-width: 100%;
+    margin: 0;
+    padding: 0px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.heading {
+    width: 100%;
+    height: 100%;
+    max-width: 1044px;
+    margin: 0;
+    padding: 150px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    max-width: 1044px;
+    margin: 0;
+    padding: 25px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+.body li {
+    list-style-type: circle;
+    color: var(--text-color);
+}
+
+.navbar .navbar-labels a {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+.navbar .navbar-labels a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar .navbar-labels a.active::after {
+    width: 100%;
+    left: 0;
+}
+.navbar .navbar-labels a.active {
+    color: var(--primary-color);
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+}
+footer .contact-info {
+    margin: 25px 0px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .contact-info .email, .address {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+footer .contact-info .social-media {
+    margin: 25px 0px 25px 24px;
+    display: flex;
+    gap: 15px;
+}
+footer .contact-info .social-media a {
+    text-decoration: none;
+}
+
+footer .footer-links {
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .footer-links a {
+    text-decoration: none;
+}
+
+footer .copyright {
+    margin: 25px 25px 25px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+footer .copyright .icon {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+/* my laptop */
+@media (max-width: 1536px) {
+    .content {
+        padding: -75px 0px 25px 0px;
+    }
+    .heading {
+        padding: 100px 0px 25px 0px;
+    }
+}

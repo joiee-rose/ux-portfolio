@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design for Collaboration</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+    <link rel="stylesheet" href="scss/image-slider.scss">
+    <!-- Poppins Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Material UI Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-icons">
+                <a href="https://github.com/joiee-rose" target="_blank" class="icon">
+                    <svg class="icon-top" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.8205 3 3 8.8205 3 16C3 22.1385 7.256 27.28 12.9775 28.643C12.6815 28.5725 12.388 28.4935 12.1 28.4035V25.425C12.1 25.425 11.6125 25.5875 10.9625 25.5875C9.144 25.5875 8.3885 23.965 8.2 23.15C8.0855 22.6535 7.7865 22.183 7.4655 21.8955C7.082 21.5535 6.9025 21.5525 6.9 21.4355C6.895 21.19 7.229 21.2 7.3875 21.2C8.2 21.2 8.816 22.0645 9.102 22.5115C9.8105 23.615 10.571 23.8 10.9625 23.8C11.45 23.8 11.871 23.727 12.161 23.587C12.295 22.643 12.715 21.802 13.4 21.2C10.3515 20.5905 8.2 18.842 8.2 16C8.2 14.536 8.7875 13.1905 9.7665 12.104C9.6665 11.8205 9.5 11.247 9.5 10.3125C9.5 9.695 9.543 8.937 9.825 8.2C9.825 8.2 11.679 8.213 13.4275 9.869C14.2345 9.634 15.098 9.5 16 9.5C16.902 9.5 17.7655 9.634 18.5725 9.869C20.321 8.213 22.175 8.2 22.175 8.2C22.4585 8.937 22.5 9.695 22.5 10.3125C22.5 11.32 22.366 11.9075 22.284 12.161C23.233 13.2375 23.8 14.562 23.8 16C23.8 18.842 21.6485 20.5905 18.6 21.2C19.414 21.915 19.9 22.9565 19.9 24.125V28.4035C19.612 28.494 19.319 28.5725 19.0225 28.643C24.744 27.28 29 22.1385 29 16C29 8.8205 23.1795 3 16 3ZM16.9065 28.965C16.607 28.986 16.305 29 16 29C16.305 29 16.6065 28.9855 16.9065 28.965ZM16 29C15.695 29 15.393 28.986 15.0935 28.965C15.3935 28.9855 15.695 29 16 29ZM14.894 28.95C14.2855 28.8985 13.6885 28.8055 13.107 28.673C13.689 28.805 14.2855 28.8985 14.894 28.95Z" fill="#FAFAFA"/></svg>
+                    <svg class="icon-bottom" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.8205 3 3 8.8205 3 16C3 22.1385 7.256 27.28 12.9775 28.643C12.6815 28.5725 12.388 28.4935 12.1 28.4035V25.425C12.1 25.425 11.6125 25.5875 10.9625 25.5875C9.144 25.5875 8.3885 23.965 8.2 23.15C8.0855 22.6535 7.7865 22.183 7.4655 21.8955C7.082 21.5535 6.9025 21.5525 6.9 21.4355C6.895 21.19 7.229 21.2 7.3875 21.2C8.2 21.2 8.816 22.0645 9.102 22.5115C9.8105 23.615 10.571 23.8 10.9625 23.8C11.45 23.8 11.871 23.727 12.161 23.587C12.295 22.643 12.715 21.802 13.4 21.2C10.3515 20.5905 8.2 18.842 8.2 16C8.2 14.536 8.7875 13.1905 9.7665 12.104C9.6665 11.8205 9.5 11.247 9.5 10.3125C9.5 9.695 9.543 8.937 9.825 8.2C9.825 8.2 11.679 8.213 13.4275 9.869C14.2345 9.634 15.098 9.5 16 9.5C16.902 9.5 17.7655 9.634 18.5725 9.869C20.321 8.213 22.175 8.2 22.175 8.2C22.4585 8.937 22.5 9.695 22.5 10.3125C22.5 11.32 22.366 11.9075 22.284 12.161C23.233 13.2375 23.8 14.562 23.8 16C23.8 18.842 21.6485 20.5905 18.6 21.2C19.414 21.915 19.9 22.9565 19.9 24.125V28.4035C19.612 28.494 19.319 28.5725 19.0225 28.643C24.744 27.28 29 22.1385 29 16C29 8.8205 23.1795 3 16 3ZM16.9065 28.965C16.607 28.986 16.305 29 16 29C16.305 29 16.6065 28.9855 16.9065 28.965ZM16 29C15.695 29 15.393 28.986 15.0935 28.965C15.3935 28.9855 15.695 29 16 29ZM14.894 28.95C14.2855 28.8985 13.6885 28.8055 13.107 28.673C13.689 28.805 14.2855 28.8985 14.894 28.95Z" fill="#FAFAFA"/></svg>
+                </a>
+                <a href="https://www.behance.net/kookymanufacturer" target="_blank" class="icon">
+                    <svg class="icon-top" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6.75V25.25H9.9375C10.7656 25.25 16.4687 25.082 16.4687 19.875C16.4687 16.6211 14.2305 15.5156 13.0937 15.1875C13.9297 14.793 15.5937 13.8555 15.5937 11.3438C15.5937 9.94531 15.3945 6.75 9.6875 6.75H1ZM21.375 8.46875V10.1562H28.2812V8.46875H21.375ZM5.0625 9.90625H8.875C9.23437 9.90625 11.6562 9.71484 11.6562 12.0312C11.6562 14.0117 9.90625 14.2188 9.1875 14.2188H5.0625V9.90625ZM25 11.6875C19.7773 11.6875 18.6875 16.2227 18.6875 18.1875C18.6875 24.0195 23.4687 24.6875 25 24.6875C29.1289 24.6875 30.3008 22.0156 30.7812 20.5312H27.7812C27.6641 20.9141 26.7891 22.1562 25.125 22.1562C22.3359 22.1562 22.0937 19.9766 22.0937 19H30.9687C31.1484 15.625 29.6719 11.6875 25 11.6875ZM24.9062 14.2188C25.7383 14.2188 26.4102 14.4609 26.8125 14.9062C27.2148 15.3555 27.5117 16.0117 27.5937 16.875H22.0937C22.1094 16.6367 22.1641 16.3633 22.25 16.0625C22.3359 15.7539 22.4687 15.4609 22.6875 15.1875C22.9062 14.918 23.2109 14.6836 23.5625 14.5C23.9219 14.3125 24.3672 14.2188 24.9062 14.2188ZM5.0625 17H9.46875C10.3437 17 12.4062 17.1367 12.4062 19.6562C12.4062 22.0977 9.80859 22.0938 9.40625 22.0938H5.0625V17Z" fill="#FAFAFA"/></svg>
+                    <svg class="icon-bottom" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6.75V25.25H9.9375C10.7656 25.25 16.4687 25.082 16.4687 19.875C16.4687 16.6211 14.2305 15.5156 13.0937 15.1875C13.9297 14.793 15.5937 13.8555 15.5937 11.3438C15.5937 9.94531 15.3945 6.75 9.6875 6.75H1ZM21.375 8.46875V10.1562H28.2812V8.46875H21.375ZM5.0625 9.90625H8.875C9.23437 9.90625 11.6562 9.71484 11.6562 12.0312C11.6562 14.0117 9.90625 14.2188 9.1875 14.2188H5.0625V9.90625ZM25 11.6875C19.7773 11.6875 18.6875 16.2227 18.6875 18.1875C18.6875 24.0195 23.4687 24.6875 25 24.6875C29.1289 24.6875 30.3008 22.0156 30.7812 20.5312H27.7812C27.6641 20.9141 26.7891 22.1562 25.125 22.1562C22.3359 22.1562 22.0937 19.9766 22.0937 19H30.9687C31.1484 15.625 29.6719 11.6875 25 11.6875ZM24.9062 14.2188C25.7383 14.2188 26.4102 14.4609 26.8125 14.9062C27.2148 15.3555 27.5117 16.0117 27.5937 16.875H22.0937C22.1094 16.6367 22.1641 16.3633 22.25 16.0625C22.3359 15.7539 22.4687 15.4609 22.6875 15.1875C22.9062 14.918 23.2109 14.6836 23.5625 14.5C23.9219 14.3125 24.3672 14.2188 24.9062 14.2188ZM5.0625 17H9.46875C10.3437 17 12.4062 17.1367 12.4062 19.6562C12.4062 22.0977 9.80859 22.0938 9.40625 22.0938H5.0625V17Z" fill="#FAFAFA"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="icon">
+                    <svg class="icon-top" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.24 2.56H5.76C3.9936 2.56 2.56 3.9936 2.56 5.76V26.24C2.56 28.0064 3.9936 29.44 5.76 29.44H26.24C28.0064 29.44 29.44 28.0064 29.44 26.24V5.76C29.44 3.9936 28.0064 2.56 26.24 2.56ZM10.88 12.8V24.96H7.04V12.8H10.88ZM7.04 9.2608C7.04 8.3648 7.808 7.68 8.96 7.68C10.112 7.68 10.8352 8.3648 10.88 9.2608C10.88 10.1568 10.1632 10.88 8.96 10.88C7.808 10.88 7.04 10.1568 7.04 9.2608ZM24.96 24.96H21.12C21.12 24.96 21.12 19.0336 21.12 18.56C21.12 17.28 20.48 16 18.88 15.9744H18.8288C17.28 15.9744 16.64 17.2928 16.64 18.56C16.64 19.1424 16.64 24.96 16.64 24.96H12.8V12.8H16.64V14.4384C16.64 14.4384 17.8752 12.8 20.3584 12.8C22.8992 12.8 24.96 14.5472 24.96 18.0864V24.96Z" fill="#FAFAFA"/></svg>
+                    <svg class="icon-bottom" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.24 2.56H5.76C3.9936 2.56 2.56 3.9936 2.56 5.76V26.24C2.56 28.0064 3.9936 29.44 5.76 29.44H26.24C28.0064 29.44 29.44 28.0064 29.44 26.24V5.76C29.44 3.9936 28.0064 2.56 26.24 2.56ZM10.88 12.8V24.96H7.04V12.8H10.88ZM7.04 9.2608C7.04 8.3648 7.808 7.68 8.96 7.68C10.112 7.68 10.8352 8.3648 10.88 9.2608C10.88 10.1568 10.1632 10.88 8.96 10.88C7.808 10.88 7.04 10.1568 7.04 9.2608ZM24.96 24.96H21.12C21.12 24.96 21.12 19.0336 21.12 18.56C21.12 17.28 20.48 16 18.88 15.9744H18.8288C17.28 15.9744 16.64 17.2928 16.64 18.56C16.64 19.1424 16.64 24.96 16.64 24.96H12.8V12.8H16.64V14.4384C16.64 14.4384 17.8752 12.8 20.3584 12.8C22.8992 12.8 24.96 14.5472 24.96 18.0864V24.96Z" fill="#FAFAFA"/></svg>
+                </a>
+        </div>
+        <div class="navbar-labels">
+            <a href="index.html#home"><h4>Home</h4></a>
+            <a href="index.html#about"><h4>About</h4></a>
+            <a href="index.html#portfolio" class="active"><h4>Portfolio</h4></a>
+            <a href="index.html#experience"><h4>Experience</h4></a>
+            <a href="index.html#contact"><h4>Contact</h4></a>
+        </div>
+    </nav>
+    <!-- Background -->
+    <div id="particles-js"></div>
+    <div class="content">
+        <!-- Heading -->
+        <div class="heading">
+            <h1>Event Management System Design</h1>
+        </div>
+        <!-- Image Slider -->
+        <section class="image-slider">
+            <div class="container">
+                <div class="carousel">
+                    <input type="radio" name="slides" checked="checked" id="slide-1">
+                    <input type="radio" name="slides" id="slide-2">
+                    <input type="radio" name="slides" id="slide-3">
+                    <input type="radio" name="slides" id="slide-4">
+                    <input type="radio" name="slides" id="slide-5">
+                    <ul class="carousel__slides">
+                        <li class="carousel__slide">
+                            <figure><div><img src="assets/img/portfolio/collaborative-system/img-1.png" width="810px" height="610px" style="object-fit:fill;" alt=""></div></figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure><div><img src="assets/img/portfolio/collaborative-system/img-2.png" width="810px" height="610px" style="object-fit:fill;" alt=""></div></figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure><div><img src="assets/img/portfolio/collaborative-system/img-3.png" width="810px" height="610px" alt=""></div></figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure><div><img src="assets/img/portfolio/collaborative-system/img-4.png" width="810px" height="610px" alt=""></div></figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure>
+                                <div><img src="assets/img/portfolio/collaborative-system/img-5.png" width="810px" height="610px" alt=""></div></figure>
+                        </li>
+                    </ul>
+                    <ul class="carousel__thumbnails">
+                        <li><label for="slide-1"><div class="index"></div></label></li>
+                        <li><label for="slide-2"><div class="index"></div></label></li>
+                        <li><label for="slide-3"><div class="index"></div></label></li>
+                        <li><label for="slide-4"><div class="index"></div></label></li>
+                        <li><label for="slide-5"><div class="index"></div></label></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Body -->
+        <div class="body">
+            <h2>Our Design Goal</h2>
+            <p class="p1">
+                St. Bonaventure University hosts a multitude of events on its campus throughout the year. Oftentimes, professors ask that students in their classes attend a few of these events for class credit.
+                The current system at Bonaventure for managing which students attend which events and for which class is both arduous and inefficient, and falls entirely on one group of invididuals to manage.
+                We designed a collaborative event management system that removes that responsibility from one group of individuals and allows for a more efficient and effective system for managing events.
+            </p>
+            <h2 style="padding-top: 25px;">How It Works</h2>
+            <p class="p1">
+                The system is a web-based application designed to be used by anyone. Anyone may create events and add them to the public calendar. Students can then view the events that are available to them and sign up for them.
+                Location-based technology is used to track the student's attendance for the duration of the event. Once the event is over, an email is sent to the professor with a list of students who attended the event as well as their attendance status.
+            </p>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="contact-info">
+        <div class="email">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.9375 6.75L11.6096 11.5403C11.9949 11.8168 12.5051 11.8168 12.8904 11.5403L19.5625 6.75M5.5 19H19C20.2426 19 21.25 17.9553 21.25 16.6667V7.33333C21.25 6.04467 20.2426 5 19 5H5.5C4.25736 5 3.25 6.04467 3.25 7.33333V16.6667C3.25 17.9553 4.25736 19 5.5 19Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="p1">stangljx22@bonaventure.edu</p>
+        </div>
+        <div class="address">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.5999C12 21.5999 19.5131 14.9216 19.5131 9.91294C19.5131 5.76361 16.1494 2.3999 12 2.3999C7.85067 2.3999 4.48697 5.76361 4.48697 9.91294C4.48697 14.9216 12 21.5999 12 21.5999Z" stroke="#FAFAFA" stroke-width="2"/><path d="M14.4003 9.60005C14.4003 10.9255 13.3258 12.0001 12.0003 12.0001C10.6748 12.0001 9.60032 10.9255 9.60032 9.60005C9.60032 8.27457 10.6748 7.20005 12.0003 7.20005C13.3258 7.20005 14.4003 8.27457 14.4003 9.60005Z" stroke="#FAFAFA" stroke-width="2"/></svg>                
+            <p class="p1">3261 West State St.<br>St. Bonaventure, New York 14778</p>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/joiee-rose" target="_blank" class="icon">
+                <svg class="icon-top" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C8.8205 3 3 8.8205 3 16C3 22.1385 7.256 27.28 12.9775 28.643C12.6815 28.5725 12.388 28.4935 12.1 28.4035V25.425C12.1 25.425 11.6125 25.5875 10.9625 25.5875C9.144 25.5875 8.3885 23.965 8.2 23.15C8.0855 22.6535 7.7865 22.183 7.4655 21.8955C7.082 21.5535 6.9025 21.5525 6.9 21.4355C6.895 21.19 7.229 21.2 7.3875 21.2C8.2 21.2 8.816 22.0645 9.102 22.5115C9.8105 23.615 10.571 23.8 10.9625 23.8C11.45 23.8 11.871 23.727 12.161 23.587C12.295 22.643 12.715 21.802 13.4 21.2C10.3515 20.5905 8.2 18.842 8.2 16C8.2 14.536 8.7875 13.1905 9.7665 12.104C9.6665 11.8205 9.5 11.247 9.5 10.3125C9.5 9.695 9.543 8.937 9.825 8.2C9.825 8.2 11.679 8.213 13.4275 9.869C14.2345 9.634 15.098 9.5 16 9.5C16.902 9.5 17.7655 9.634 18.5725 9.869C20.321 8.213 22.175 8.2 22.175 8.2C22.4585 8.937 22.5 9.695 22.5 10.3125C22.5 11.32 22.366 11.9075 22.284 12.161C23.233 13.2375 23.8 14.562 23.8 16C23.8 18.842 21.6485 20.5905 18.6 21.2C19.414 21.915 19.9 22.9565 19.9 24.125V28.4035C19.612 28.494 19.319 28.5725 19.0225 28.643C24.744 27.28 29 22.1385 29 16C29 8.8205 23.1795 3 16 3ZM16.9065 28.965C16.607 28.986 16.305 29 16 29C16.305 29 16.6065 28.9855 16.9065 28.965ZM16 29C15.695 29 15.393 28.986 15.0935 28.965C15.3935 28.9855 15.695 29 16 29ZM14.894 28.95C14.2855 28.8985 13.6885 28.8055 13.107 28.673C13.689 28.805 14.2855 28.8985 14.894 28.95Z" fill="#FAFAFA"/></svg>
+            </a>
+            <a href="https://www.behance.net/kookymanufacturer" target="_blank" class="icon">
+                <svg class="icon-top" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6.75V25.25H9.9375C10.7656 25.25 16.4687 25.082 16.4687 19.875C16.4687 16.6211 14.2305 15.5156 13.0937 15.1875C13.9297 14.793 15.5937 13.8555 15.5937 11.3438C15.5937 9.94531 15.3945 6.75 9.6875 6.75H1ZM21.375 8.46875V10.1562H28.2812V8.46875H21.375ZM5.0625 9.90625H8.875C9.23437 9.90625 11.6562 9.71484 11.6562 12.0312C11.6562 14.0117 9.90625 14.2188 9.1875 14.2188H5.0625V9.90625ZM25 11.6875C19.7773 11.6875 18.6875 16.2227 18.6875 18.1875C18.6875 24.0195 23.4687 24.6875 25 24.6875C29.1289 24.6875 30.3008 22.0156 30.7812 20.5312H27.7812C27.6641 20.9141 26.7891 22.1562 25.125 22.1562C22.3359 22.1562 22.0937 19.9766 22.0937 19H30.9687C31.1484 15.625 29.6719 11.6875 25 11.6875ZM24.9062 14.2188C25.7383 14.2188 26.4102 14.4609 26.8125 14.9062C27.2148 15.3555 27.5117 16.0117 27.5937 16.875H22.0937C22.1094 16.6367 22.1641 16.3633 22.25 16.0625C22.3359 15.7539 22.4687 15.4609 22.6875 15.1875C22.9062 14.918 23.2109 14.6836 23.5625 14.5C23.9219 14.3125 24.3672 14.2188 24.9062 14.2188ZM5.0625 17H9.46875C10.3437 17 12.4062 17.1367 12.4062 19.6562C12.4062 22.0977 9.80859 22.0938 9.40625 22.0938H5.0625V17Z" fill="#FAFAFA"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="icon">
+                <svg class="icon-top" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.24 2.56H5.76C3.9936 2.56 2.56 3.9936 2.56 5.76V26.24C2.56 28.0064 3.9936 29.44 5.76 29.44H26.24C28.0064 29.44 29.44 28.0064 29.44 26.24V5.76C29.44 3.9936 28.0064 2.56 26.24 2.56ZM10.88 12.8V24.96H7.04V12.8H10.88ZM7.04 9.2608C7.04 8.3648 7.808 7.68 8.96 7.68C10.112 7.68 10.8352 8.3648 10.88 9.2608C10.88 10.1568 10.1632 10.88 8.96 10.88C7.808 10.88 7.04 10.1568 7.04 9.2608ZM24.96 24.96H21.12C21.12 24.96 21.12 19.0336 21.12 18.56C21.12 17.28 20.48 16 18.88 15.9744H18.8288C17.28 15.9744 16.64 17.2928 16.64 18.56C16.64 19.1424 16.64 24.96 16.64 24.96H12.8V12.8H16.64V14.4384C16.64 14.4384 17.8752 12.8 20.3584 12.8C22.8992 12.8 24.96 14.5472 24.96 18.0864V24.96Z" fill="#FAFAFA"/></svg>
+            </a>
+        </div>
+    </div>
+    <div class="footer-links">
+        <a href="index.html#home"><p class="p1">Home</p></a>
+        <a href="index.html#about"><p class="p1">About</p></a>
+        <a href="index.html#portfolio"><p class="p1">Portfolio</p></a>
+        <a href="index.html#experience"><p class="p1">Experience</p></a>
+        <a href="index.html#contact"><p class="p1">Contact</p></a>
+    </div>
+    <div style="width: 25%;"></div>
+    <div class="copyright">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" stroke="#FAFAFA" stroke-width="2"/><path d="M6.41938 12.4C6.41938 11.3013 6.66471 10.32 7.15538 9.456C7.65671 8.58133 8.33404 7.904 9.18738 7.424C10.0514 6.93333 11.0167 6.688 12.0834 6.688C13.3314 6.688 14.4247 7.008 15.3634 7.648C16.302 8.288 16.958 9.17333 17.3314 10.304H14.7554C14.4994 9.77067 14.1367 9.37067 13.6674 9.104C13.2087 8.83733 12.6754 8.704 12.0674 8.704C11.4167 8.704 10.8354 8.85867 10.3234 9.168C9.82204 9.46667 9.42738 9.89333 9.13938 10.448C8.86204 11.0027 8.72338 11.6533 8.72338 12.4C8.72338 13.136 8.86204 13.7867 9.13938 14.352C9.42738 14.9067 9.82204 15.3387 10.3234 15.648C10.8354 15.9467 11.4167 16.096 12.0674 16.096C12.6754 16.096 13.2087 15.9627 13.6674 15.696C14.1367 15.4187 14.4994 15.0133 14.7554 14.48H17.3314C16.958 15.6213 16.302 16.512 15.3634 17.152C14.4354 17.7813 13.342 18.096 12.0834 18.096C11.0167 18.096 10.0514 17.856 9.18738 17.376C8.33404 16.8853 7.65671 16.208 7.15538 15.344C6.66471 14.48 6.41938 13.4987 6.41938 12.4Z" fill="white"/></svg>
+        <p class="p1">Joie-Rose Stangle 2024</p>
+    </div>
+</footer>
+</html>

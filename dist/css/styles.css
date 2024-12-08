@@ -1,0 +1,868 @@
+:root {
+    --bg-color: #212121;
+    --text-color: #fafafa;
+    --primary-color: #5928ed;
+    --secondary-color: #d62828;
+    --tertiary-color: #fafafa;
+    --text-font-family: 'Poppins', sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: fixed;
+    z-index: -1;
+}
+h1 {
+    font-family: var(--text-font-family);
+    font-size: 32px;
+    font-weight: 700;
+}
+h2 {
+    font-family: var(--text-font-family);
+    font-size: 24px;
+    font-weight: 700;
+}
+h3 {
+    font-family: var(--text-font-family);
+    font-size: 18.72px;
+    font-weight: 600;
+}
+h4 {
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 600;
+}
+h5 {
+    font-family: var(--text-font-family);
+    font-size: 13.28px;
+    font-weight: 500;
+}
+h6 {
+    font-family: var(--text-font-family);
+    font-size: 10.72px;
+    font-weight: 500;
+}
+.p1 {
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 300;
+}
+.p2 {
+    font-family: var(--text-font-family);
+    font-size: 14px;
+    font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6, .p1, .p2 {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+.navbar .navbar-icons {
+    margin: 0;
+    padding: 38px 0px 38px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.navbar .navbar-icons .icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+.navbar .navbar-icons .icon .icon-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.navbar .navbar-icons .icon .icon-bottom {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    z-index: 1;
+}
+.navbar .navbar-icons .icon .icon-bottom path {
+    fill: var(--primary-color); /* bottom path color */
+}
+.navbar .navbar-icons .icon:hover .icon-top path {
+    fill: var(--secondary-color); /* top path color on hover */
+    transform: translate(1px, 2px);
+}
+.navbar .navbar-icons .icon:hover .icon-bottom path {
+    fill: var(--primary-color); /* bottom path color on hover */
+    transform: translate(-1px, -1px);
+}
+.navbar .navbar-icons .icon path {
+    transition: fill 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+}
+.navbar .navbar-labels {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: var(--text-color);
+}
+.navbar .navbar-labels a {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+.navbar .navbar-labels a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar .navbar-labels a:hover::after {
+    width: 100%;
+    left: 0;
+}
+.navbar .navbar-labels a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+/* Home */
+#home {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+
+/* About */
+#about {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#about h1 {
+    margin: 0;
+    padding: 0px 0px 90px 0px;
+}
+.about-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-imgs {
+    width: 962px;
+    height: 510px;
+    position: relative;
+    display: inline-block;
+}
+.about-imgs .img-1 {
+    top: 0;
+    left: 0;
+}
+.about-imgs .img-2 {
+    top: 10px;
+    left: 328px;
+}
+.about-imgs .img-3 {
+    top: 0px;
+    left: 654px;
+}
+.about-imgs img {
+    width: 308px;
+    height: 500px;
+    object-fit: cover;
+    border: solid 1px var(--bg-color);
+    box-shadow: 4px 4px var(--bg-color), 5px 5px var(--secondary-color), 5px 3px var(--secondary-color), 3px 5px var(--secondary-color);
+    position: absolute;
+}
+
+.about-text {
+    width: 862px;
+    margin: 35px 0px 0px 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-text .p1 {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+
+/* Portfolio */
+#portfolio {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#portfolio h1 {
+    margin: 0;
+    padding: 0px 0px 100px 0px;
+}
+/* carousel */
+#portfolio .carousel {
+    width: 100%;
+    max-width: calc(100vw - 700px); /* 350px padding on left and right sides */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+#portfolio .carousel-viewport {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+#portfolio .carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+}
+#portfolio .carousel-slide {
+    width: 100%;
+    margin: 0;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* carousel buttons */
+#portfolio .carousel-nav {
+    margin: 0;
+    padding: 50px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+#portfolio .carousel-nav .nav-item1, .nav-item2 {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+#portfolio .carousel-nav .nav-item1:hover, .nav-item2:hover {
+    cursor: pointer;
+}
+#portfolio .carousel-nav .nav-item1.active svg {
+    fill: var(--primary-color);
+    transform: rotate(-45deg);
+    scale: 1.15;
+    transition: transform 0.17s ease-in-out, scale 0.17 ease-in-out;
+}
+#portfolio .carousel-nav .nav-item2.active svg {
+    fill: var(--primary-color);
+    transform: rotate(45deg);
+    scale: 1.15;
+    transition: transform 0.17s ease-in-out, scale 0.17s ease-in-out;
+}
+/* portfolio items */
+.portfolio-item {
+    width: 538px;
+    height: 300px;
+}
+.project-img {
+    position: absolute;
+}
+.project-info {
+    width: 291px;
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 130px;
+    left: 242px;
+    background-color: var(--tertiary-color);
+    border: solid 1px var(--bg-color);
+    box-shadow: 4px 4px var(--bg-color), 5px 5px var(--secondary-color), 5px 3px var(--secondary-color), 3px 5px var(--secondary-color);
+}
+.project-info h3, h5, h6 {
+    color: var(--bg-color);
+}
+.project-info h3 {
+    padding: 10px 0px 10px 20px;
+}
+.project-info h5 {
+    padding: 13px 0px 0px 20px;
+}
+.project-more {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-tags {
+    margin: 0;
+    padding: 0px 0px 15px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.project-tags h6 {
+    margin: 0;
+    padding: 0px 5px 0px 5px;
+    color: var(--text-color);
+    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 8px;
+}
+.project-info .view-proj {
+    min-width: 87px;
+    margin: 0;
+    padding: 0px 20px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.project-info .view-proj h5 {
+    margin: 0;
+    padding: 0;
+}
+.project-info .view-proj a {
+    text-decoration: none;
+}
+.project-info .view-proj .icon {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 5px 0px 5px 0px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.project-info .view-proj .icon .icon-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.project-info .view-proj .icon .icon-bottom {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 1;
+}
+.project-info .view-proj .icon .icon-top path {
+    fill: var(--bg-color); /* top path color */
+}
+.project-info .view-proj .icon .icon-bottom path {
+    fill: var(--secondary-color); /* bottom path color */
+}
+.project-info .view-proj:hover {
+    cursor: pointer;
+}
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+@keyframes moveTextRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(7px);
+    }
+}
+.project-info .view-proj:hover .icon {
+    animation: moveRight 0.3s forwards;
+}
+.project-info .view-project:hover .icon svg path {
+    animation: moveRight 0.3s forwards;
+}
+.project-info .view-proj:hover h5 {
+    animation: moveTextRight 0.25s forwards;
+}
+/* view design philosophy */
+#portfolio .footer {
+    width: 100%;
+    max-width: calc(100vw - 700px);
+    margin: 0px;
+    padding: 50px 20px 0px 0px;
+    display: flex;
+    justify-content: right;
+}
+#porfolio .footer .view-phil {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: visible;
+}
+#portfolio .view-phil a {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+}
+#portfolio .view-phil .p1 {
+    padding-right: 10px;
+}
+#portfolio .view-phil .icon {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding-bottom: 2px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    overflow: visible;
+}
+#portfolio .view-phil .icon .icon-top {
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+#portfolio .view-phil .icon .icon-bottom {
+    overflow: visible;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 2;
+}
+#portfolio .view-phil:hover {
+    cursor: pointer;
+}
+#portfolio .view-phil:hover .icon .icon-top path {
+    fill: var(--secondary-color); /* top path color on hover */
+}
+#portfolio .view-phil:hover .icon {
+    animation: moveRight 0.3s forwards;
+}
+#portfolio .view-phil:hover .icon svg path {
+    animation: moveRight 0.3s forwards;
+}
+#portfolio .view-phil:hover .p1 {
+    animation: moveTextRight 0.25s forwards;
+}
+#portfolio .view-phil .p1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+#portfolio .view-phil a:hover .p1::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+/* Experience */
+#experience {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#experience h1 {
+    margin: 0;
+    padding: 0px 0px 100px 0px;
+}
+.experience-content {
+    max-width: calc(100vw - 700px); /* 350px padding on left and right sides */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* vertical carousel buttons */
+#experience .vertical-carousel-nav {
+    min-width: 321px;
+    margin: 0;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#experience .vertical-carousel-nav .nav-edu, .nav-work {
+    margin: 0;
+    padding: 0px 0px 45px 0px;
+    border: none;
+    background-color: transparent;
+}
+#experience .vertical-carousel-nav .nav-edu:hover, .nav-work:hover {
+    cursor: pointer;
+}
+#experience .vertical-carousel-nav .nav-edu.active h2, #experience .vertical-carousel-nav .nav-work.active h2 {
+    color: var(--secondary-color);
+}
+/* divider */
+#experience .divider {
+    width: 1px;
+    height: 450px;
+    background-color: var(--tertiary-color);
+    position: relative;
+}
+#experience .divider .location-indicator {
+    width: 3px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: -4px;
+    top: 0;
+    z-index: 1;
+    transition: top 0.3s ease;
+}
+/* vertical carousel */
+#experience .vertical-carousel {
+    width: 100%;
+    max-width: 530px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 0px 0px 0px 100px;
+    overflow: hidden;
+    position: relative;
+}
+#experience .vertical-carousel-viewport {
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+#experience .vertical-carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+}
+#experience .vertical-carousel-slide {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+/* experience items */
+.edu-content, .work-content {
+    margin: 0;
+    padding: 0;
+}
+.edu-content .item, .work-content .item {
+    margin: 0;
+    padding: 0px 0px 40px 0px;
+}
+.edu-content .item .item-header, .work-content .item .item-header {
+    margin: 0;
+    padding: 0px 0px 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.edu-content .item .item-header .p2, .work-content .item .item-header .p2 {
+    padding-bottom: 3px;
+}
+.edu-content .item h4, .work-content .item h4 {
+    padding-bottom: 10px;
+}
+
+
+
+/* Contact */
+#contact {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#contact h1 {
+    padding-bottom: 100px;
+}
+.contact-form {
+    width: 100%;
+    max-width: calc(100vw - 700px); /* 350px padding on left and right sides */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    font-family: var(--text-font-family);
+    font-size: 13.28px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.contact-form input {
+    height: 30px;
+    margin: 0px 0px 25px 0px;
+    padding: 0px 3px 0px 2px;
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 300;
+}
+.contact-form textarea {
+    max-width: 100%;
+    height: 120px;
+    margin: 0px 0px 25px 0px;
+    padding: 0px 3px 0px 2px;
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 300;
+}
+.contact-form button {
+    margin: 0;
+    padding: 3px 0px 3px 0px;
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 2px;
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+.contact-form button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 2px;
+    box-shadow: 1px 1px var(--secondary-color);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+.contact-form button:hover {
+    transform: translate(3px, 3px);
+}
+.contact-form button:hover::before {
+    transform: translate(-2px, -2px);
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+}
+footer .contact-info {
+    margin: 25px 0px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .contact-info .email, .address {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+footer .contact-info .social-media {
+    margin: 25px 0px 25px 24px;
+    display: flex;
+    gap: 15px;
+}
+footer .contact-info .social-media a {
+    text-decoration: none;
+}
+footer .footer-links {
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+footer .copyright {
+    margin: 25px 25px 25px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+footer .copyright .icon {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+/* Design Philosophy */
+#design-philosophy {
+    min-width: 100%;
+    margin: 0;
+    padding: 150px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.design-philosophy-item {
+    text-align: center;
+}
+#design-philosophy h1 {
+    padding: 0px 0px 25px 0px;
+}
+#design-philosophy h2 {
+    padding: 0px 0px 15px 0px;
+}
+#design-philosophy .p1 {
+    padding: 0px 150px 50px 150px;
+}
+#design-philosophy .focus {
+    margin: 0;
+    padding: 0;
+}
+#design-philosophy h2 .focus {
+    margin: 0;
+    padding: 0px 2px 0px 2px;
+    color: var(--secondary-color);
+    font-size: 26px;
+}
+
+
+/* my laptop */
+@media (max-width: 1536px) {
+    #about h1 {
+        margin: 0;
+        padding: 0px 0px 45px 0px;
+    }
+    .about-imgs {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        display: inline-block;
+    }
+    .about-imgs .img-1 {
+        top: 0;
+        left: 0;
+    }
+    .about-imgs .img-2 {
+        top: 10px;
+        left: 33%;
+    }
+    .about-imgs .img-3 {
+        top: 0px;
+        left: 66%;
+    }
+    .about-imgs img {
+        width: 32%;
+        height: auto;
+        object-fit: cover;
+        border: solid 1px var(--bg-color);
+        box-shadow: 4px 4px var(--bg-color), 5px 5px var(--secondary-color), 5px 3px var(--secondary-color), 3px 5px var(--secondary-color);
+        position: absolute;
+    }
+
+    #portfolio .carousel {
+        width: 100%;
+        max-width: 1126px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+}
