@@ -813,6 +813,14 @@ footer .copyright .icon {
 #design-philosophy .p1 {
     padding: 0px 150px 50px 150px;
 }
+#design-philosophy a {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--text-font-family);
+    font-size: 16px;
+    font-weight: 400;
+}
 #design-philosophy .focus {
     margin: 0;
     padding: 0;
